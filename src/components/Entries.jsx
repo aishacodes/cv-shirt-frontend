@@ -11,7 +11,7 @@ function Entries() {
       setVillagers(res.data);
       console.log(villagers);
     });
-  }, []);
+  });
 
   return (
     <div className="w-full">
@@ -30,22 +30,10 @@ function Entries() {
               <div className="pattern">
                 {villager.patterns.map((pattern, patternIndex) => {
                   return (
-                    <div>
-                      <p className="py-1">
-                        <span>{pattern.pattern1} </span>
-                        <span>{pattern.color1}</span>
-                      </p>
+                    <div key={`entry-page-pattern-${patternIndex}`}>
                       <p>
-                        <span>{pattern.pattern2} </span>
-                        <span>{pattern.color2}</span>
-                      </p>
-                      <p>
-                        <span>{pattern.pattern3} </span>
-                        <span>{pattern.color3}</span>
-                      </p>
-                      <p>
-                        <span>{pattern.pattern4} </span>
-                        <span>{pattern.color4}</span>
+                        <span>{pattern.pattern} </span>
+                        <span>{pattern.color}</span>
                       </p>
                     </div>
                   );

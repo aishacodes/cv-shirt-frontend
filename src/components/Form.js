@@ -38,10 +38,10 @@ function Form() {
       fullname,
       size,
       patterns: [
-        { pattern1, color1 },
-        { pattern2, color2 },
-        { pattern3, color3 },
-        { pattern4, color4 },
+        { pattern: pattern1, color: color1 },
+        { pattern: pattern2, color: color2 },
+        { pattern: pattern3, color: color3 },
+        { pattern: pattern4, color: color4 },
       ],
     };
     formServices
