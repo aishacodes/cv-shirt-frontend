@@ -20,7 +20,6 @@ function VillagersForm({ addVillagerInfo }) {
           backgroundImage: 'url("./pattern1.jpeg")',
           backgroundPosition: "center",
         }}
-        title="Woman holding a mug"
       ></div>
       <form onSubmit={addVillagerInfo} className="px-8 py-8 overflow-y-auto	">
         <header className="mb-8 text-center ">
@@ -59,7 +58,11 @@ function VillagersForm({ addVillagerInfo }) {
             {designs.map((design, designIndex) => (
               <p className="flex flex-row mx-4" key={`design-${designIndex}`}>
                 <input type="radio" name="pattern1" required />{" "}
-                <img src={design} className="w-32 my-4 lg:my-0 ml-1" />
+                <img
+                  src={design}
+                  className="w-32 my-4 lg:my-0 ml-1"
+                  alt={design}
+                />
               </p>
             ))}
           </span>
