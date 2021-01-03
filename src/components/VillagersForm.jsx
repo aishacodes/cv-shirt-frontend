@@ -18,7 +18,7 @@ function VillagersForm({ addVillagerInfo }) {
       <div
         class="hidden lg:h-48 w-48 lg:h-full lg:w-2/4 lg:block bg-cover"
         style={{
-          backgroundImage: 'url("./pattern1.jpeg")',
+          backgroundImage: 'url("./design1.jpeg")',
           backgroundPosition: "center",
         }}
       ></div>
@@ -53,7 +53,8 @@ function VillagersForm({ addVillagerInfo }) {
           </span>
         </div>
         <h3 className="my-3">
-          Choose 4 patterns, one from each of the patterns below.{" "}
+          Choose 4 patterns of your choice, one from each of the pattern
+          sections below and their corresponding colours.{" "}
         </h3>
         <div className="flex flex-col mb-4">
           <label>Pattern 1</label>

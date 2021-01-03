@@ -12,8 +12,8 @@ const create = (newObject) => {
     newObject
   );
 };
-
-export default {
+const formService = {
   getAll,
   create,
 };
+export default formService;
