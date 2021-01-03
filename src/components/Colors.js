@@ -4,24 +4,25 @@ function Colors({ colorTitle }) {
   const colors = ["Deep Blue", "Black", "Ash", "Orange"];
 
   return (
-    <div className="flex flex-col lg:flex-row my-4">
-      <p> {colorTitle}</p>
-      <span className="flex flex-row pl-2  flex-wrap lg:flex-nowrap">
+    <div className="flex flex-col lg:flex-row my-4 lg:items-center">
+      <p> {colorTitle}:</p>
+      <select
+        name="color"
+        className="bg-gray-200 shadow rounded flex-grow mx-2 p-1 pr-2 focus:outline-none"
+      >
+        <option value="black" className="bg-gray-200">
+          Select color
+        </option>
         {colors.map((color, colorIndex) => (
-          <p
-            className="flex flex-row items-center mr-4"
+          <option
+            className="bg-gray-200"
+            value={color}
             key={`color-${colorTitle}-${colorIndex}`}
           >
-            <input
-              type="radio"
-              name={colorTitle.toLowerCase()}
-              value={color}
-              required
-            />{" "}
-            <span className="pl-1">{color}</span>
-          </p>
+            {color}
+          </option>
         ))}
-      </span>
+      </select>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 
 import Colors from "./Colors";
+import Pattern from "./Pattern";
 
 function VillagersForm({ addVillagerInfo }) {
   const designs = [
@@ -28,11 +29,11 @@ function VillagersForm({ addVillagerInfo }) {
           </h1>
           <p>.....Anyone can build</p>
         </header>
-        <div className="flex flex-col md:flex-row mb-4">
+        <div className="flex flex-col md:flex-row md:items-center mb-4">
           <label>Fullname: </label>
           <input
             type="text"
-            className="focus:outline-none border-b"
+            className="focus:outline-none border-b flex-grow mx-2 md:p-1"
             name="fullname"
             required
           />
@@ -71,51 +72,18 @@ function VillagersForm({ addVillagerInfo }) {
           </span>
           <Colors colorTitle="Colour 1" />
         </div>
-        <div className="flex flex-col mb-4">
-          <label>
-            Pattern 2{" "}
-            <span className="text-xs font-light mx-4">
-              (logo of any technology such as Reactjs, Vuejs.)
-            </span>{" "}
-          </label>
-          <input
-            type="text"
-            name="pattern2"
-            className="focus:outline-none border-b"
-            required
-          />
-          <Colors colorTitle="Colour 2" />
-        </div>
-        <div className="flex flex-col mb-4">
-          <label>
-            Pattern 3{" "}
-            <span className="text-xs font-light mx-4">
-              (qoutes like "I breath code", "I code to live".)
-            </span>{" "}
-          </label>
-          <input
-            type="text"
-            name="pattern3"
-            className="focus:outline-none border-b"
-            required
-          />
-          <Colors colorTitle="Colour 3" />
-        </div>
-        <div className="flex flex-col">
-          <label>
-            Pattern 4{" "}
-            <span className="text-xs font-light mx-4">
-              (qoute or tech logo like.)
-            </span>{" "}
-          </label>
-          <input
-            type="text"
-            name="pattern4"
-            className="focus:outline-none border-b"
-            required
-          />
-          <Colors colorTitle="Colour 4" />
-        </div>
+        <Pattern
+          patternName="Pattern 2"
+          patternDescription=" (logo of any technology such as Reactjs, Vuejs.)"
+        />
+        <Pattern
+          patternName="Pattern 3"
+          patternDescription='(qoutes like "I breath code", "I code to live".)'
+        />
+        <Pattern
+          patternName="Pattern 4"
+          patternDescription=" (logo of any technology or qoute)"
+        />
         <button className="place-self-center">Submit</button>
       </form>
     </div>
