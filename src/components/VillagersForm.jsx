@@ -56,11 +56,14 @@ function VillagersForm({ addVillagerInfo }) {
           <label>Pattern 1</label>
           <span className="flex flex-col col-wrap md:flex-row mt-4">
             {designs.map((design, designIndex) => (
-              <p className="flex flex-row mx-4" key={`design-${designIndex}`}>
+              <p
+                className="flex flex-row mx-4 my-4 lg:my-0"
+                key={`design-${designIndex}`}
+              >
                 <input type="radio" name="pattern1" required />{" "}
                 <img
                   src={design}
-                  className="w-32 my-4 lg:my-0 ml-1"
+                  className="w-32 h-32 lg:h-auto ml-1"
                   alt={design}
                 />
               </p>
