@@ -1,11 +1,20 @@
-import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Entries from "./components/Entries";
+import Form from "./components/Form";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <p className="text-green-900">Form</p>
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/entries">
+            <Entries />
+          </Route>
+          <Route path="/">
+            <Form />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
-export default App;
