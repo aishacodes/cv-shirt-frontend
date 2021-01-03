@@ -1,9 +1,7 @@
 import axios from "axios";
 
-const baseUrl = "https://cv-shirt-form.herokuapp.com";
-
 const getAll = () => {
-  return axios.get(`${baseUrl}/villagers`);
+  return axios.get("https://cv-shirt-form.herokuapp.com/api/villagers");
 };
 
 const create = (newObject) => {

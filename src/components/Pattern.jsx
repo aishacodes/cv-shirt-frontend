@@ -13,7 +13,7 @@ function Pattern({ patternName, patternDescription }) {
       <input
         type="text"
         name={patName}
-        className="focus:outline-none border-b"
+        className="focus:outline-none border-b px-2"
         required
       />
     </div>

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Entries from "./components/Entries";
+import Entries from "./components/Entries.jsx";
 import Form from "./components/Form";
 
 export default function App() {
