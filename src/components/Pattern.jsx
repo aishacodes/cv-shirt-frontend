@@ -1,5 +1,4 @@
 import React from "react";
-import Colors from "./Colors";
 
 function Pattern({ patternName, patternDescription }) {
   const patName = patternName.toLowerCase().split(" ").join("");
