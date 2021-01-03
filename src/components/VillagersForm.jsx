@@ -38,7 +38,7 @@ function VillagersForm({ addVillagerInfo }) {
             required
           />
         </div>
-        <div className="flex flex-col flex-wrap lg:flex-row mb-4">
+        <div className="flex flex-col flex-wrap lg:flex-row mb-4 ">
           <label>Size: </label>
           <span className="flex flex-row pl-2  flex-wrap lg:flex-nowrap">
             {sizes.map((size, sizeIndex) => (
@@ -56,7 +56,7 @@ function VillagersForm({ addVillagerInfo }) {
           Choose 4 patterns of your choice, one from each of the pattern
           sections below and their corresponding colours.{" "}
         </h3>
-        <div className="flex flex-col mb-4">
+        <div className="flex flex-col mb-4 pt-4">
           <label>Pattern 1</label>
           <span className="flex flex-col col-wrap md:flex-row mt-4">
             {designs.map((design, designIndex) => (
