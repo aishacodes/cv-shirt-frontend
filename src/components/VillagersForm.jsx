@@ -5,10 +5,10 @@ import Pattern from "./Pattern";
 
 function VillagersForm({ addVillagerInfo }) {
   const designs = [
-    "pattern1.jpeg",
-    "pattern2.jpeg",
-    "pattern3.jpeg",
-    "pattern4.jpeg",
+    "design1.jpeg",
+    "design2.jpeg",
+    "design3.jpeg",
+    "design4.jpeg",
   ];
 
   const sizes = ["Medium", "Large", "x-large", "xx-large"];
@@ -52,7 +52,9 @@ function VillagersForm({ addVillagerInfo }) {
             ))}
           </span>
         </div>
-        <h3 className="my-3">Shirt Designs</h3>
+        <h3 className="my-3">
+          Choose 4 patterns, one from each of the patterns below.{" "}
+        </h3>
         <div className="flex flex-col mb-4">
           <label>Pattern 1</label>
           <span className="flex flex-col col-wrap md:flex-row mt-4">
@@ -61,7 +63,7 @@ function VillagersForm({ addVillagerInfo }) {
                 className="flex flex-row mx-4 my-4 lg:my-0"
                 key={`design-${designIndex}`}
               >
-                <input type="radio" name="pattern1" required />{" "}
+                <input type="radio" name="pattern1" value={design} required />{" "}
                 <img
                   src={design}
                   className="w-32 h-32 lg:h-auto ml-1"
@@ -76,15 +78,23 @@ function VillagersForm({ addVillagerInfo }) {
           patternName="Pattern 2"
           patternDescription=" (logo of any technology such as Reactjs, Vuejs.)"
         />
+        <Colors colorTitle="Colour 2" />
+
         <Pattern
           patternName="Pattern 3"
           patternDescription='(qoutes like "I breath code", "I code to live".)'
         />
+        <Colors colorTitle="Colour 3" />
+
         <Pattern
           patternName="Pattern 4"
-          patternDescription=" (logo of any technology or qoute)"
+          patternDescription=" (logo of any technology or qoute i.e repeat any of pattern 3 or 4)"
         />
-        <button className="place-self-center">Submit</button>
+        <Colors colorTitle="Colour 4" />
+
+        <center>
+          <button className="place-self-center rounded">Submit</button>
+        </center>
       </form>
     </div>
   );

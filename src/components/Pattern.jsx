@@ -2,21 +2,21 @@ import React from "react";
 import Colors from "./Colors";
 
 function Pattern({ patternName, patternDescription }) {
+  const patName = patternName.toLowerCase().split(" ").join("");
   return (
     <div className="flex flex-col mb-4">
       <label>
         {patternName}
-        <span className="text-xs font-light mx-4">
+        <span className="text-xs font-light mx-2">
           {patternDescription}
         </span>{" "}
       </label>
       <input
         type="text"
-        name="pattern3"
+        name={patName}
         className="focus:outline-none border-b"
         required
       />
-      <Colors colorTitle="Colour 3" />
     </div>
   );
 }
