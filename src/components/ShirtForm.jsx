@@ -110,6 +110,7 @@ function ShirtForm({ addVillagerInfo, addOtherVillagerInfo }) {
                 <Pattern
                   patternName="Pattern 2"
                   patternDescription=" (logo of any technology such as Reactjs, Vuejs.)"
+                  placeholder="Enter your preferred logo"
                 />
                 <Colors colorTitle="Colour 2" />
               </div>
@@ -117,6 +118,7 @@ function ShirtForm({ addVillagerInfo, addOtherVillagerInfo }) {
                 <Pattern
                   patternName="Pattern 3"
                   patternDescription='(programming qoutes like "I breath code", "I code to live".)'
+                  placeholder="Enter your preferred programming qoute"
                 />
                 <Colors colorTitle="Colour 3" />
               </div>
@@ -124,6 +126,7 @@ function ShirtForm({ addVillagerInfo, addOtherVillagerInfo }) {
                 <Pattern
                   patternName="Pattern 4"
                   patternDescription=" (logo of any technology or qoute i.e repeat any of pattern 3 or 4)"
+                  placeholder="Enter your preferred logo or qoute"
                 />
                 <Colors colorTitle="Colour 4" />
               </div>
