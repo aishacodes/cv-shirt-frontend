@@ -18,13 +18,13 @@ function ShirtForm({ addVillagerInfo, addOtherVillagerInfo }) {
   return (
     <div className="flex flex-col flex-grow w-screen h-screen lg:flex-row fixed">
       <div
-        class="hidden lg:h-48 w-48 lg:h-full lg:w-2/4 lg:block bg-cover"
+        class="hidden lg:h-full lg:w-2/4 lg:block bg-cover"
         style={{
           backgroundImage: 'url("./design1.jpeg")',
           backgroundPosition: "center",
         }}
       ></div>
-      <div className="px-8 py-8 overflow-y-auto	">
+      <div className="px-8 py-8 overflow-y-auto	lg:w-2/4">
         <header className="mb-8 text-center ">
           <h1 className="md:text-4xl text-2xl font-semibold ">
             Codevillage Swaggs
@@ -82,7 +82,7 @@ function ShirtForm({ addVillagerInfo, addOtherVillagerInfo }) {
                 Choose 4 patterns of your choice, one from each of the pattern
                 sections below and their corresponding colours.{" "}
               </h3>
-              <div className="flex flex-col mb-4 pt-4">
+              <div className="flex flex-col mb-8 pt-4 px-4 rounded border border-gray-300	">
                 <label>Pattern 1</label>
                 <span className="flex flex-col col-wrap md:flex-row mt-4">
                   {customDesigns.map((customDesign, customDesignIndex) => (
@@ -106,23 +106,27 @@ function ShirtForm({ addVillagerInfo, addOtherVillagerInfo }) {
                 </span>
                 <Colors colorTitle="Colour 1" />
               </div>
-              <Pattern
-                patternName="Pattern 2"
-                patternDescription=" (logo of any technology such as Reactjs, Vuejs.)"
-              />
-              <Colors colorTitle="Colour 2" />
-
-              <Pattern
-                patternName="Pattern 3"
-                patternDescription='(qoutes like "I breath code", "I code to live".)'
-              />
-              <Colors colorTitle="Colour 3" />
-
-              <Pattern
-                patternName="Pattern 4"
-                patternDescription=" (logo of any technology or qoute i.e repeat any of pattern 3 or 4)"
-              />
-              <Colors colorTitle="Colour 4" />
+              <div className="px-4 mb-8 rounded border border-gray-300">
+                <Pattern
+                  patternName="Pattern 2"
+                  patternDescription=" (logo of any technology such as Reactjs, Vuejs.)"
+                />
+                <Colors colorTitle="Colour 2" />
+              </div>
+              <div className="px-4 rounded border mb-8 border-gray-300">
+                <Pattern
+                  patternName="Pattern 3"
+                  patternDescription='(qoutes like "I breath code", "I code to live".)'
+                />
+                <Colors colorTitle="Colour 3" />
+              </div>
+              <div className="px-4 rounded mb-8 border border-gray-300">
+                <Pattern
+                  patternName="Pattern 4"
+                  patternDescription=" (logo of any technology or qoute i.e repeat any of pattern 3 or 4)"
+                />
+                <Colors colorTitle="Colour 4" />
+              </div>
               <center>
                 <button className="place-self-center rounded">Submit</button>
               </center>
