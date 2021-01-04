@@ -10,6 +10,7 @@ function Colors({ colorTitle }) {
       <select
         name={colorName}
         className="bg-gray-200 shadow rounded flex-grow md:mx-2 p-1 pr-2 focus:outline-none"
+        required
       >
         <option value="black" className="bg-gray-200">
           Select color

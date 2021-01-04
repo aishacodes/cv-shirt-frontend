@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import formServices from "../services/formServices";
 
 import "./form.scss";
-import VillagersForm from "./VillagersForm";
+import ShirtForm from "./ShirtForm";
 
 const Sucess = () => {
   return (
@@ -51,12 +51,34 @@ function Form() {
       })
       .catch((err) => console.log(err));
   };
+  const addOtherVillagerInfo = (e) => {
+    e.preventDefault();
+    const target = e.target;
+    const fullname = target.fullname.value;
+    const size = target.size.value;
+    const pattern = target.pattern.value;
+    const color = target.colour.value;
+    const newObj = {
+      fullname,
+      size,
+      patterns: [{ pattern, color }],
+    };
+    formServices
+      .create(newObj)
+      .then(() => {
+        setView(true);
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <>
       {view && <Sucess />}
       {view === false ? (
-        <VillagersForm addVillagerInfo={addVillagerInfo} />
+        <ShirtForm
+          addVillagerInfo={addVillagerInfo}
+          addOtherVillagerInfo={addOtherVillagerInfo}
+        />
       ) : (
         ""
       )}
