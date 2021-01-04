@@ -36,7 +36,7 @@ function ShirtForm({ addVillagerInfo, addOtherVillagerInfo }) {
           <label> Select your programme:</label>
           <select
             name="shirt option"
-            className="bg-gray-200 shadow rounded flex-grow md:mx-2 p-1 pr-2 focus:outline-none"
+            className="bg-gray-200 shadow rounded flex-grow md:mx-2 p-1 mt-2 pr-2 focus:outline-none"
             required
             onChange={(e) => setShirtOption(e.target.value)}
           >
