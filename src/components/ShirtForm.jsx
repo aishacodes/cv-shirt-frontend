@@ -116,7 +116,7 @@ function ShirtForm({ addVillagerInfo, addOtherVillagerInfo }) {
               <div className="px-4 rounded border mb-8 border-gray-300">
                 <Pattern
                   patternName="Pattern 3"
-                  patternDescription='(qoutes like "I breath code", "I code to live".)'
+                  patternDescription='(programming qoutes like "I breath code", "I code to live".)'
                 />
                 <Colors colorTitle="Colour 3" />
               </div>

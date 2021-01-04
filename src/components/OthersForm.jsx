@@ -86,25 +86,31 @@ function OthersForm({ addVillagerInfo }) {
               ))}
             </span>
           ) : patternChoice === "choice-2" ? (
-            <div className="flex flex-col mb-4 pt-8">
+            <div className="flex flex-col mb-4 pt-4">
               <label>
-                Logo of any technology (like Vuejs logo, Reactjs logo)
+                Logo of any technology{" "}
+                <span className="text-xs font-light mx-2">
+                  (like Vuejs logo, Reactjs logo)
+                </span>
               </label>
               <input
                 type="text"
                 name="pattern"
-                className="focus:outline-none border-b px-2"
+                className="focus:outline-none border-b p-2"
               />
             </div>
           ) : patternChoice === "choice-3" ? (
-            <div className="flex flex-col mb-4 pt-8">
+            <div className="flex flex-col mb-4 pt-4">
               <label>
-                Technology qoutes (like "I breathe code", "I code to live" )
+                Programming qoutes{" "}
+                <span className="text-xs font-light mx-2">
+                  (like "I breathe code", "I code to live" )
+                </span>
               </label>
               <input
                 type="text"
                 name="pattern"
-                className="focus:outline-none border-b px-2"
+                className="focus:outline-none border-b p-2"
               />
             </div>
           ) : (
