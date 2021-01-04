@@ -97,6 +97,8 @@ function OthersForm({ addVillagerInfo }) {
                 type="text"
                 name="pattern"
                 className="focus:outline-none border-b p-2"
+                placeholder="Enter your preferred logo"
+                required
               />
             </div>
           ) : patternChoice === "choice-3" ? (
@@ -111,6 +113,8 @@ function OthersForm({ addVillagerInfo }) {
                 type="text"
                 name="pattern"
                 className="focus:outline-none border-b p-2"
+                required
+                placeholder="Enter your preferred qoute"
               />
             </div>
           ) : (
